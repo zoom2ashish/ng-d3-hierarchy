@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<svg [attr.width]=\"width + margin?.left + margin?.right\" [attr.height]=\"height + margin?.top + margin?.bottom\">\n  <g [attr.transform]=\"'translate(' + margin.left + ',' + margin.top + ')'\">\n    <!-- Render Nodes -->\n    <g class=\"node\" [ngClass]=\"{ 'root': !node?.parent, 'with-children': !!node?.children, 'leaf': !node?.children }\"  *ngFor=\"let node of nodes\" [attr.transform]=\"'translate(' + node?.y + ',' + node?.x + ')'\">\n      <circle class=\"circle\" r=\"10\" (click)=\"toggleExpandCollapse(node)\"></circle>\n      <text class=\"label\" dy=\"0.35em\" [attr.x]=\"(node?.parent && !!node.children) ? -15 : 15\" (click)=\"toggleExpandCollapse(node)\">{{ node?.data?.name }}</text>\n      <g appInsertIcon>\n      </g>\n    </g>\n\n    <g class=\"link\" *ngFor=\"let link of links\">\n      <path [attr.d]=\"getLinkPath(link)\"></path>\n    </g>\n  </g>\n</svg>"
+module.exports = "<svg [attr.width]=\"width + margin?.left + margin?.right\" [attr.height]=\"height + margin?.top + margin?.bottom\">\n  <g [attr.transform]=\"'translate(' + margin.left + ',' + margin.top + ')'\">\n    <!-- Render Nodes -->\n    <g class=\"node\" [ngClass]=\"{ 'root': !node?.parent, 'with-children': !!node?.children, 'leaf': !node?.children }\"  *ngFor=\"let node of nodes\" [attr.transform]=\"'translate(' + node?.y + ',' + node?.x + ')'\">\n      <circle class=\"circle\" r=\"10\" (click)=\"toggleExpandCollapse(node)\"></circle>\n      <text class=\"label\" dy=\"0.35em\" [attr.x]=\"(node?.parent && !!node.children) ? -15 : 15\" (click)=\"toggleExpandCollapse(node)\">{{ node?.data?.name }}</text>\n      <g appInsertIcon>\n      </g>\n    </g>\n\n    <g class=\"link\" *ngFor=\"let link of links\">\n      <path [attr.d]=\"getLinkPath(link)\"></path>\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
 
@@ -136,7 +136,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _insert_icon_insert_icon_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./insert-icon/insert-icon.component */ "./src/app/insert-icon/insert-icon.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -146,15 +145,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _insert_icon_insert_icon_component__WEBPACK_IMPORTED_MODULE_3__["InsertIconComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
@@ -196,69 +193,6 @@ var data = {
         }
     ]
 };
-
-
-/***/ }),
-
-/***/ "./src/app/insert-icon/insert-icon.component.html":
-/*!********************************************************!*\
-  !*** ./src/app/insert-icon/insert-icon.component.html ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n<svg><text>Hello</text></svg>\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/insert-icon/insert-icon.component.scss":
-/*!********************************************************!*\
-  !*** ./src/app/insert-icon/insert-icon.component.scss ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2luc2VydC1pY29uL2luc2VydC1pY29uLmNvbXBvbmVudC5zY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/insert-icon/insert-icon.component.ts":
-/*!******************************************************!*\
-  !*** ./src/app/insert-icon/insert-icon.component.ts ***!
-  \******************************************************/
-/*! exports provided: InsertIconComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InsertIconComponent", function() { return InsertIconComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var InsertIconComponent = /** @class */ (function () {
-    function InsertIconComponent() {
-    }
-    InsertIconComponent.prototype.ngOnInit = function () {
-    };
-    InsertIconComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: '[appInsertIcon]',
-            template: __webpack_require__(/*! ./insert-icon.component.html */ "./src/app/insert-icon/insert-icon.component.html"),
-            styles: [__webpack_require__(/*! ./insert-icon.component.scss */ "./src/app/insert-icon/insert-icon.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], InsertIconComponent);
-    return InsertIconComponent;
-}());
-
 
 
 /***/ }),
