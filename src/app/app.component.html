@@ -1,14 +1,21 @@
 <svg [attr.width]="width + margin?.left + margin?.right" [attr.height]="height + margin?.top + margin?.bottom">
   <g [attr.transform]="'translate(' + margin.left + ',' + margin.top + ')'">
     <!-- Render Nodes -->
-    <g class="node" [ngClass]="{ 'root': !node?.parent, 'with-children': !!node?.children, 'leaf': !node?.children }"  *ngFor="let node of nodes" [attr.transform]="'translate(' + node?.y + ',' + node?.x + ')'">
-      <circle class="circle" r="10" (click)="toggleExpandCollapse(node)"></circle>
-      <text class="label" dy="0.35em" [attr.x]="(node?.parent && !!node.children) ? -15 : 15" (click)="toggleExpandCollapse(node)">{{ node?.data?.name }}</text>
+    <g class="node" [ngClass]="{ 'root': !node?.parent, 'with-children': !!node?.children, 'leaf': !node?.children }"
+      *ngFor="let node of nodes;let i = index" [attr.transform]="'translate(' + (node?.y) + ',' + node?.x + ')'">
+      <circle class="circle" dy="0.01rem" r="20" (click)="toggleExpandCollapse(node)"></circle>
+      <text class="label" [attr.y]="20" [attr.x]="(node?.parent && !!node.children) ? 20 : -15" (click)="toggleExpandCollapse(node)">{{ node?.data?.name }}</text>
       <g appInsertIcon>
+        <foreignObject x="-16" y="-16" width="32" height="32">
+          <xhtml:div>
+            <app-circle-icon (click)="toggleExpandCollapse(node)"></app-circle-icon>
+          </xhtml:div>
+          <!-- <xhtml:div class="label">Test</xhtml:div> -->
+        </foreignObject>
       </g>
     </g>
 
-    <g class="link" *ngFor="let link of links">
+    <g class="link" *ngFor="let link of links;let i = index" [attr.transform]="'translate(' + (node?.y) + ',' + node?.x + ')'">
       <path [attr.d]="getLinkPath(link)"></path>
     </g>
   </g>

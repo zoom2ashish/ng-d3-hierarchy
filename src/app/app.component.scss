@@ -4,7 +4,11 @@
     fill: #999999;
 
     >.circle {
-      fill: #999999;
+      fill: #555555;
+      opacity: 0.4;
+      &:hover {
+        opacity: 1;
+      }
     }
 
     >.label {
@@ -33,6 +37,7 @@
     stroke: #555555;
     stroke-opacity: 0.4;
     stroke-width: 1.5;
+    transition: fill 1s ease;
 
     .label {
       fill: #000000;
@@ -46,6 +51,11 @@
     stroke: #555555;
     stroke-opacity: 0.4;
     stroke-width: 1.5;
+    transition: stroke-opacity 1s ease;
+
+    &:hover {
+      stroke-opacity: 1;
+    }
   }
 
   .link {
